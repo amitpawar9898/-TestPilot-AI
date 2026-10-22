@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: testpilot-ai
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: TESTPILOT_DATA_DIR
+        value: /var/data
+      - key: TESTPILOT_REPORTS_DIR
+        value: /var/data/reports
+    disk:
+      name: testpilot-data
+      mountPath: /var/data
+      sizeGB: 1

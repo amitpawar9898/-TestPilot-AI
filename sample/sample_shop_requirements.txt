@@ -1,0 +1,4 @@
+Cart() | add(10.0, 2) | total() == 22.0
+Cart(0.0) | add(5.0) | add(7.0) | total() == 12.0
+Cart(0.0) | add(100.0) | discounted(20) == 80.0
+Cart().average_item() raises ValueError

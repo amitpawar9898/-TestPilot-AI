@@ -1,0 +1,6 @@
+apply_discount(200, 10) == 180.0
+apply_discount(50, 0) == 50.0
+is_palindrome("A man, a plan, a canal: Panama") == True
+average([]) raises ValueError
+clamp(15, 0, 10) == 10
+fizzbuzz(15) == "FizzBuzz"

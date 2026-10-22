@@ -1,0 +1,339 @@
+{
+  "base_url": "http://127.0.0.1:8000",
+  "operation_count": 55,
+  "verified_count": 55,
+  "missing": [],
+  "extra": [],
+  "results": [
+    {
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "status": 201,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/admin/users",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/admin/users",
+      "status": 201,
+      "response_shape": "valid"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/auth/admin/users/{user_id}",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/auth/admin/users/{user_id}",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/admin/settings",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/auth/admin/settings",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/logout",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/password",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/dashboard",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/analysis/preview",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/samples",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/samples/{name}",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/settings",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/settings",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/settings/models",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/settings/availability",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/settings/test-connection",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/runs",
+      "status": 202,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/{run_id}/status",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/{run_id}/events",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/{run_id}",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/{run_id}/analysis",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/{run_id}/findings",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/{run_id}/tests",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/{run_id}/fix",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/{run_id}/fix/diff",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/{run_id}/report",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/{run_id}/tests/download",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/runs/{run_id}/tests",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/runs/{run_id}/tests",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/runs/{run_id}/execution",
+      "status": 202,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/{run_id}/fix/download",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/{run_id}/improvement/download",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/runs/{run_id}/fix/retry",
+      "status": 202,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/{run_id}/report/download",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/runs/{run_id}/report/save",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/learning",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/learning/{fix_id}",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/learning/run/{run_id}",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/learning/export",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/learning/{fix_id}",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/learning",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/batch",
+      "status": 202,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/batch/{batch_id}",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "GET",
+      "path": "/api/batch/{batch_id}/download",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/settings/retention/purge",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/settings/retention/scrub-sources",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/runs/{run_id}",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/auth/account/runs",
+      "status": 200,
+      "response_shape": "valid"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/account/delete",
+      "status": 200,
+      "response_shape": "valid"
+    }
+  ]
+}

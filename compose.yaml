@@ -1,0 +1,36 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      TESTPILOT_DATA_DIR: /app/data
+      TESTPILOT_REPORTS_DIR: /app/reports
+      # Ollama runs on the Windows host, outside this Compose network.
+      TESTPILOT_BASE_URL: http://host.docker.internal:11434/v1
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - testpilot-data:/app/data
+      - testpilot-reports:/app/reports
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_PROXY_TARGET: http://api:8000
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  testpilot-data:
+  testpilot-reports:

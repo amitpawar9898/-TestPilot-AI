@@ -1,0 +1,326 @@
+{
+  "method": "real Orchestrator.start; deterministic provider; trusted local execution of bundled samples",
+  "settings": {
+    "max_tests_per_function": 14,
+    "total_timeout_seconds": 60,
+    "per_test_timeout_seconds": 5,
+    "max_iterations": 2,
+    "llm": "disabled"
+  },
+  "samples": [
+    {
+      "sample": "sample_buggy.py",
+      "requirements_file": "sample_requirements.txt",
+      "run_id": "f8f79e5fca",
+      "status": "completed",
+      "verdict": "Confirmed defects found",
+      "duration_seconds": 6.953,
+      "generated_cases": 84,
+      "results_before_fix": {
+        "passed": 77,
+        "failed": 6,
+        "error": 1,
+        "executed": 84
+      },
+      "results_after_fix": {
+        "passed": 82,
+        "failed": 1,
+        "error": 1,
+        "executed": 84
+      },
+      "fix_status": "verified",
+      "applied_fixes": [
+        {
+          "rule": "TP006",
+          "function": "average",
+          "line": 10,
+          "description": "Added a guard that raises ValueError when `numbers` is empty (a ZeroDivisionError was observed)."
+        },
+        {
+          "rule": "TP001",
+          "function": "collect",
+          "line": 37,
+          "description": "Replaced mutable default `bucket=[]` with `None` and create it inside the function."
+        },
+        {
+          "rule": "SMART-PERCENT",
+          "function": "apply_discount",
+          "line": 21,
+          "description": "Built-in rule: a percentage was divided by 10; changed to 100 (re-tested before keeping)."
+        }
+      ],
+      "skipped_fixes": [
+        {
+          "rule": "logic",
+          "function": "apply_discount",
+          "line": null,
+          "reason": "A confirmed requirement failure is a logic error. It needs an AI provider (Settings) or a manual fix; see the finding's evidence."
+        },
+        {
+          "rule": "logic",
+          "function": "average",
+          "line": null,
+          "reason": "A confirmed requirement failure is a logic error. It needs an AI provider (Settings) or a manual fix; see the finding's evidence."
+        }
+      ],
+      "regressions": [],
+      "improvement_status": "none",
+      "improvement_reason": "No safe improvements found: Ruff found no applicable safe edits.",
+      "improvement_metrics_before": {
+        "ruff_issues": 0,
+        "needs_formatting": 0,
+        "function_count": 6,
+        "public_function_count": 6,
+        "docstring_coverage_percent": 100.0,
+        "type_hint_coverage_percent": 50.0,
+        "cyclomatic_complexity_total": 14,
+        "lines": 55
+      },
+      "improvement_metrics_after": {
+        "ruff_issues": 0,
+        "needs_formatting": 0,
+        "function_count": 6,
+        "public_function_count": 6,
+        "docstring_coverage_percent": 100.0,
+        "type_hint_coverage_percent": 50.0,
+        "cyclomatic_complexity_total": 14,
+        "lines": 55
+      },
+      "improvement_changes": [],
+      "improvement_verification": {},
+      "regression_rejections": 0,
+      "findings": 9,
+      "severity_counts": {
+        "Critical": 0,
+        "High": 3,
+        "Medium": 3,
+        "Low": 3,
+        "Info": 0
+      },
+      "execution_mode": "local-trusted process (NOT a sandbox: no filesystem/network isolation)",
+      "llm_used": false
+    },
+    {
+      "sample": "sample_inventory.py",
+      "requirements_file": "sample_inventory_requirements.txt",
+      "run_id": "ad0a21cfcf",
+      "status": "completed",
+      "verdict": "Confirmed defects found",
+      "duration_seconds": 8.728,
+      "generated_cases": 135,
+      "results_before_fix": {
+        "passed": 123,
+        "failed": 9,
+        "error": 3,
+        "executed": 135
+      },
+      "results_after_fix": {
+        "passed": 131,
+        "failed": 1,
+        "error": 3,
+        "executed": 135
+      },
+      "fix_status": "verified",
+      "applied_fixes": [
+        {
+          "rule": "TP006",
+          "function": "average_price",
+          "line": 21,
+          "description": "Added a guard that raises ValueError when `prices` is empty (a ZeroDivisionError was observed)."
+        },
+        {
+          "rule": "TP001",
+          "function": "add_item",
+          "line": 24,
+          "description": "Replaced mutable default `bucket=[]` with `None` and create it inside the function."
+        },
+        {
+          "rule": "TP006",
+          "function": "average_level",
+          "line": 92,
+          "description": "Added a guard that raises ValueError when `self.stock` is empty (a ZeroDivisionError was observed)."
+        },
+        {
+          "rule": "TP002",
+          "function": null,
+          "line": 10,
+          "description": "Replaced bare `except:` with `except Exception:` so KeyboardInterrupt/SystemExit are not swallowed."
+        },
+        {
+          "rule": "TP005",
+          "function": null,
+          "line": 32,
+          "description": "Replaced `== None` with `is None`."
+        },
+        {
+          "rule": "SMART-PERCENT",
+          "function": "apply_discount",
+          "line": 16,
+          "description": "Built-in rule: a percentage was divided by 10; changed to 100 (re-tested before keeping)."
+        },
+        {
+          "rule": "SMART-PAGE",
+          "function": "paginate",
+          "line": 41,
+          "description": "Built-in rule: docstring says pages are 1-based; changed `page` to `(page - 1)` in the offset (re-tested before keeping)."
+        }
+      ],
+      "skipped_fixes": [
+        {
+          "rule": "logic",
+          "function": "apply_discount",
+          "line": null,
+          "reason": "A confirmed requirement failure is a logic error. It needs an AI provider (Settings) or a manual fix; see the finding's evidence."
+        },
+        {
+          "rule": "logic",
+          "function": "average_price",
+          "line": null,
+          "reason": "A confirmed requirement failure is a logic error. It needs an AI provider (Settings) or a manual fix; see the finding's evidence."
+        },
+        {
+          "rule": "logic",
+          "function": "paginate",
+          "line": null,
+          "reason": "A confirmed requirement failure is a logic error. It needs an AI provider (Settings) or a manual fix; see the finding's evidence."
+        },
+        {
+          "rule": "logic",
+          "function": "Inventory.average_level",
+          "line": null,
+          "reason": "A confirmed requirement failure is a logic error. It needs an AI provider (Settings) or a manual fix; see the finding's evidence."
+        }
+      ],
+      "regressions": [],
+      "improvement_status": "verified",
+      "improvement_reason": "Safe lint/format edits improved measured code-quality metrics.",
+      "improvement_metrics_before": {
+        "ruff_issues": 1,
+        "needs_formatting": 1,
+        "function_count": 15,
+        "public_function_count": 14,
+        "docstring_coverage_percent": 100.0,
+        "type_hint_coverage_percent": 7.1,
+        "cyclomatic_complexity_total": 23,
+        "lines": 98
+      },
+      "improvement_metrics_after": {
+        "ruff_issues": 1,
+        "needs_formatting": 0,
+        "function_count": 15,
+        "public_function_count": 14,
+        "docstring_coverage_percent": 100.0,
+        "type_hint_coverage_percent": 7.1,
+        "cyclomatic_complexity_total": 23,
+        "lines": 99
+      },
+      "improvement_changes": [
+        {
+          "rule": "Ruff format",
+          "description": "Applied standard Python formatting."
+        }
+      ],
+      "improvement_verification": {
+        "executed": 135,
+        "preserved_passing_cases": 131
+      },
+      "regression_rejections": 0,
+      "findings": 16,
+      "severity_counts": {
+        "Critical": 0,
+        "High": 5,
+        "Medium": 5,
+        "Low": 6,
+        "Info": 0
+      },
+      "execution_mode": "local-trusted process (NOT a sandbox: no filesystem/network isolation)",
+      "llm_used": false
+    },
+    {
+      "sample": "sample_shop.py",
+      "requirements_file": "sample_shop_requirements.txt",
+      "run_id": "d732889a23",
+      "status": "completed",
+      "verdict": "Confirmed defects found",
+      "duration_seconds": 5.593,
+      "generated_cases": 26,
+      "results_before_fix": {
+        "passed": 23,
+        "failed": 3,
+        "error": 0,
+        "executed": 26
+      },
+      "results_after_fix": {
+        "passed": 26,
+        "failed": 0,
+        "error": 0,
+        "executed": 26
+      },
+      "fix_status": "verified",
+      "applied_fixes": [
+        {
+          "rule": "TP006",
+          "function": "average_item",
+          "line": 22,
+          "description": "Added a guard that raises ValueError when `self.items` is empty (a ZeroDivisionError was observed)."
+        },
+        {
+          "rule": "SMART-PERCENT",
+          "function": "discounted",
+          "line": 28,
+          "description": "Built-in rule: a percentage was divided by 10; changed to 100 (re-tested before keeping)."
+        }
+      ],
+      "skipped_fixes": [
+        {
+          "rule": "logic",
+          "function": "Cart.discounted",
+          "line": null,
+          "reason": "A confirmed requirement failure is a logic error. It needs an AI provider (Settings) or a manual fix; see the finding's evidence."
+        },
+        {
+          "rule": "logic",
+          "function": "Cart.average_item",
+          "line": null,
+          "reason": "A confirmed requirement failure is a logic error. It needs an AI provider (Settings) or a manual fix; see the finding's evidence."
+        }
+      ],
+      "regressions": [],
+      "improvement_status": "none",
+      "improvement_reason": "No safe improvements found: Ruff found no applicable safe edits.",
+      "improvement_metrics_before": {
+        "ruff_issues": 0,
+        "needs_formatting": 0,
+        "function_count": 5,
+        "public_function_count": 4,
+        "docstring_coverage_percent": 100.0,
+        "type_hint_coverage_percent": 0.0,
+        "cyclomatic_complexity_total": 6,
+        "lines": 28
+      },
+      "improvement_metrics_after": {
+        "ruff_issues": 0,
+        "needs_formatting": 0,
+        "function_count": 5,
+        "public_function_count": 4,
+        "docstring_coverage_percent": 100.0,
+        "type_hint_coverage_percent": 0.0,
+        "cyclomatic_complexity_total": 6,
+        "lines": 28
+      },
+      "improvement_changes": [],
+      "improvement_verification": {},
+      "regression_rejections": 0,
+      "findings": 3,
+      "severity_counts": {
+        "Critical": 0,
+        "High": 2,
+        "Medium": 0,
+        "Low": 1,
+        "Info": 0
+      },
+      "execution_mode": "local-trusted process (NOT a sandbox: no filesystem/network isolation)",
+      "llm_used": false
+    }
+  ]
+}
